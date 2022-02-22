@@ -1,25 +1,18 @@
-.Titulo{
-    color:rgb(140, 50, 110);
-    text-align: center;
-    /* background gradient */
-    background: -webkit-linear-gradient(left, #ff1053 0%, #ff4f0f 100%);
-    background: linear-gradient(to right, #ff1053 0%, #ff4f0f 100%);
-
-      /* background imagem gif */
-    background-image: url('./imagens/fire-51.gif');
-
-     /* background texto com Imagem gif */
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-
+.caixa{
+  background-color: #3F51B5
 }
-img{
-    width: 70%;
-    height: 400px;
-    display: block;
-    margin: 0 auto;
+
+.titulo{
+  color: black !important;
+  font-weight: bold !important;
 }
-.Home{
-  min-height: calc(100vh - 40%);
-  padding: 18.5px;
+
+.botao{
+  border-color: black !important;
+   background-color: #3F51B5;
+    color: white !important ;
+}
+
+.postagens{
+  background-color: white;
 }
