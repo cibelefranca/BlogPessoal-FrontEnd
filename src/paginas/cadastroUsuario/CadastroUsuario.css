@@ -1,0 +1,18 @@
+.imagem2{
+    background-image: url(https://www.santosfc.com.br/wp-content/uploads/2021/07/Arte-Comunicado-Site-2021.png);
+    background-repeat: no-repeat;
+    width: 100vh;
+    min-height: 100vh;
+    background-size: cover;
+    background-position: center;
+    
+}
+
+.textos2{
+    font-weight: bold !important;
+
+}
+
+.btnCancelar{
+    margin-right: 20px !important;
+}
