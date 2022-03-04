@@ -2,15 +2,19 @@ import React, {useState, useEffect} from 'react'
 import { Link, useHistory } from 'react-router-dom'
 import { Box, Card, CardActions, CardContent, Button, Typography } from '@material-ui/core';
 import './ListaPostagem.css';
-import useLocalStorage from 'react-use-localstorage';
 import Postagem from '../../../models/Postagem';
 import { busca } from '../../../services/Service';
+import { useSelector } from 'react-redux';
+import { TokenState } from '../../../store/tokens/tokensReducer';
+
 
 function ListaPostagem() {
 
     const [posts, setPosts] = useState<Postagem[]>([])
-    const [token, setToken] = useLocalStorage('token');
     let history = useHistory();
+    const token = useSelector<TokenState, TokenState["tokens"]>(
+      (state) => state.tokens
+  );
   
     useEffect(() => {
       if (token == "") {
@@ -59,14 +63,14 @@ function ListaPostagem() {
 
               <Link to={`/formularioPostagem/${post.id}`} className="text-decorator-none" >
                 <Box mx={1}>
-                  <Button variant="contained" size='small' className='button'>
+                  <Button variant="contained" size='small' color='primary' className='button'>
                     atualizar
                   </Button>
                 </Box>
               </Link>
               <Link to={`/deletarPostagem/${post.id}`} className="text-decorator-none">
                 <Box mx={1}>
-                  <Button variant="contained" size='small' className='buttonDelete'>
+                  <Button variant="contained" size='small' color='secondary' className='buttonDelete'>
                     deletar
                   </Button>
                 </Box>
